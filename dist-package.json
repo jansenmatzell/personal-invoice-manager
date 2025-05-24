@@ -1,0 +1,11 @@
+{
+    "name": "personal-invoice-manager",
+    "version": "1.0.0",
+    "description": "A desktop application to manage personal invoices",
+    "main": "main.js",
+    "dependencies": {
+      "electron-is-dev": "^2.0.0",
+      "jspdf": "^2.5.1",
+      "csv-writer": "^1.6.0"
+    }
+  }
