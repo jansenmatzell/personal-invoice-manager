@@ -5,9 +5,9 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "react-start": "react-scripts start",
+    "react-start": "cross-env BROWSER=none react-scripts start",
     "react-build": "react-scripts build",
-    "electron-dev": "concurrently \"npm run react-start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-dev": "concurrently \"npm:react-start\" \"wait-on http://localhost:3000 && electron .\"",
     "clean": "node clean.js",
     "dist": "npm run clean && npm run react-build && electron-builder --win portable"
   },
@@ -25,7 +25,8 @@
     "concurrently": "^8.2.0",
     "electron": "^25.3.1",
     "electron-builder": "^24.4.0",
-    "wait-on": "^7.0.1"
+    "wait-on": "^7.0.1",
+    "cross-env": "^10.0.0"
   },
   "build": {
     "appId": "com.example.personal-invoice-manager",
